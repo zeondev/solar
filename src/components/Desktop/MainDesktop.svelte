@@ -1,8 +1,5 @@
 <script>
-    //helpgwpeo[kajopwegopewgzop]
     import Taskbar from "./Taskbar.svelte";
-
-    // alert(window.settings.theme);
 
     window.settings.apps = [
         { name: "Test App 1", icon: "/images/appicons/ta1.png", openInNewTab: false, app: "C:/Programs/TestApp1" },
