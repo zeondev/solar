@@ -1,4 +1,6 @@
 <script>
+    import App from "../../App.svelte";
+
     export let apps = [];
 
     function tbToggle(event) {
@@ -8,6 +10,28 @@
         list2.remove("tb-anim-pressup");
         // start removing/adding classes for active/open
         var list = event.target.classList;
+
+        // if (list.contains("no-open")) {
+        //     document
+        //         .querySelectorAll("main.taskbar>ul.apps>li.app")
+        //         .forEach((item, index) => {
+        //             if (item.classList.contains("tb-active"))
+        //                 item.classList.remove("tb-active");
+        //         });
+        //     list.add("tb-active");
+        // }
+        // } else if (list.contains("no-open") && list.contains('tb-active')) {
+        //     list.remove("tb-active");
+        // }
+        document
+            .querySelectorAll("main.taskbar>ul.apps>li.app")
+            .forEach((item, index) => {
+                if (
+                    item.classList.contains("tb-active") &&
+                    item.classList.contains("no-open")
+                )
+                    item.classList.remove("tb-active");
+            });
         if (list.contains("tb-open") && !list.contains("tb-active")) {
             // check if any other app is active and remove it
             document
@@ -42,19 +66,35 @@
 <main class="taskbar">
     <ul class="apps">
         {#each apps as app}
-            <li
-                class="app"
-                on:mousedown={tbPressDown}
-                on:mouseup={tbPressUp}
-                on:click={tbToggle}
-            >
-                <img
-                    class="tb-item"
-                    draggable="false"
-                    src={app.icon}
-                    alt={app.name}
-                />
-            </li>
+            {#if typeof app.opensWindow !== "undefined" && !app.opensWindow}
+                <li
+                    class="app no-open tb-open"
+                    on:mousedown={tbPressDown}
+                    on:mouseup={tbPressUp}
+                    on:click={tbToggle}
+                >
+                    <img
+                        class="tb-item"
+                        draggable="false"
+                        src={app.icon}
+                        alt={app.name}
+                    />
+                </li>
+            {:else}
+                <li
+                    class="app"
+                    on:mousedown={tbPressDown}
+                    on:mouseup={tbPressUp}
+                    on:click={tbToggle}
+                >
+                    <img
+                        class="tb-item"
+                        draggable="false"
+                        src={app.icon}
+                        alt={app.name}
+                    />
+                </li>
+            {/if}
         {/each}
     </ul>
 </main>
@@ -133,6 +173,9 @@
                 border-radius: 2px;
                 background: $tb-open;
                 transition: 0.15s cubic-bezier(0, 0.55, 0.45, 1);
+            }
+            :global(li.app.no-open::after) {
+                content: none !important;
             }
             :global(li.tb-active::after) {
                 content: "" !important;
