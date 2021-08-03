@@ -1,13 +1,12 @@
 <script>
-
-        export let windows = [];
-        function dragElement(elmnt) {
+    export let windows = [];
+    function dragElement(elmnt) {
         var pos1 = 0,
             pos2 = 0,
             pos3 = 0,
             pos4 = 0;
-        if (document.getElementById(elmnt.id + "header")) {
-            document.getElementById(elmnt.id + "header").onmousedown =
+        if (document.getElementById(elmnt.id + "h")) {
+            document.getElementById(elmnt.id + "h").onmousedown =
                 dragMouseDown;
         } else {
             elmnt.onmousedown = dragMouseDown;
@@ -41,7 +40,11 @@
 </script>
 
 <main>
-    <slot />
+    <!-- {#each windows as win}
+        
+    {/each} -->
 </main>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+</style>

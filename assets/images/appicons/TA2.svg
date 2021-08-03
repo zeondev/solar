@@ -17,14 +17,14 @@
    inkscape:export-xdpi="191.62199"
    inkscape:export-ydpi="191.62199"
    inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
-   sodipodi:docname="yes.svg">
+   sodipodi:docname="TA2.svg">
   <defs
      id="defs2">
     <linearGradient
        inkscape:collect="always"
        id="linearGradient2829">
       <stop
-         style="stop-color:#a50000;stop-opacity:1"
+         style="stop-color:#0fa500;stop-opacity:1"
          offset="0"
          id="stop2825" />
       <stop
@@ -80,7 +80,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="15.839192"
      inkscape:cx="17.647676"
-     inkscape:cy="30.249673"
+     inkscape:cy="20.148148"
      inkscape:document-units="mm"
      inkscape:current-layer="rect833"
      inkscape:document-rotation="0"
@@ -124,19 +124,19 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:3.8576px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0964401"
-         x="-0.7963835"
+         x="-1.0506687"
          y="1.5495712"
          id="text2833"><tspan
            sodipodi:role="line"
            id="tspan2831"
-           x="-0.79638338"
+           x="-1.0506686"
            y="1.5495712"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.0964401">Test</tspan><tspan
            sodipodi:role="line"
-           x="-0.79638338"
+           x="-1.0506686"
            y="6.4162264"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.0964401"
-           id="tspan2835">App1</tspan></text>
+           id="tspan2835">App2</tspan></text>
     </g>
   </g>
 </svg>

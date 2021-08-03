@@ -5,6 +5,6 @@ const app = HMR(App, { target: document.body, props: { theme: "glow.theme" } }, 
 if (window.localStorage.getItem('fs') === null) {
     window.localStorage.setItem("fs", JSON.stringify({ "created": Date.now(), "lastUpdated": Date.now(), "files": []}));
 }
-window.settings = {theme: "C:/Windows/Resources/Themes/Glow.theme"};
+window.solar = {settings: {theme: "C:/Windows/Resources/Themes/Glow.theme"}};
 
 export default app;

@@ -42,7 +42,7 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Segoe UI Variable;
-	overflow:hidden;
+	overflow: hidden;
 }
 
 a {
@@ -113,4 +113,11 @@ button:focus {
 		bottom: 30%;
 		opacity: 0;
 	}
+}
+
+noscript {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }

@@ -3,5 +3,5 @@
 </script>
 
 <Desktop>
-    hi
+    <!-- Desktop is currently not finished...-->
 </Desktop>

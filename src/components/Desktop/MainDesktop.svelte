@@ -1,15 +1,18 @@
 <script>
     import Taskbar from "./Taskbar.svelte";
+    import Window from "./Windows/Window.svelte";
+    import WindowContainer from "./Windows/WindowContainer.svelte";
 
-    window.settings.apps = [
-        { name: "Test App 1", icon: "/images/appicons/ta1.png", openInNewTab: false, app: "C:/Programs/TestApp1" },
+    window.solar.settings.apps = [
+        { id: "ta1", name: "Test App 1", icon: "/images/appicons/ta1.png", openInNewTab: false, app: "C:/Programs/TestApp1" },
+        { id: "ta2", name: "Test App 2", icon: "/images/appicons/ta2.png", openInNewTab: false, app: "C:/Programs/TestApp1" },
     ];
 </script>
 
 <main>
     <!-- {theme} -->
     <slot />
-    <Taskbar apps={window.settings.apps} />
+    <Taskbar apps={window.solar.settings.apps} />
 </main>
 
 <style lang="scss">
