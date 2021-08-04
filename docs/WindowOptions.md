@@ -32,7 +32,7 @@ A `Window` object can have many kinds of parameters. This small guide will help 
 
 Raw data (taken from ta1's app object directly):
 
-```json
+```js
 {
     id: "ta1",
     name: "Test App 1",
