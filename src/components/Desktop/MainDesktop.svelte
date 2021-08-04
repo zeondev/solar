@@ -3,18 +3,42 @@
     import Window from "./Windows/Window.svelte";
     import WindowContainer from "./Windows/WindowContainer.svelte";
 
-    window.solar.settings.apps = [
-        { id: "start", name: "Start", icon: "/images/appicons/start.png", isSystemPinned: true, opensWindow: false, app: "C:/Programs/TestApp1", style: "display:none;" },
-        { id: "ta1", name: "Test App 1", icon: "/images/appicons/ta1.png", isUserPinned: true, app: "C:/Programs/TestApp1", style: "width:800px;height:600px;" },
-        { id: "ta2", name: "Test App 2", icon: "/images/appicons/ta2.png", isUserPinned: true, app: "C:/Programs/TestApp1", style: "width:800px;height:600px;" },
+    window.solar.vars = {};
+    window.solar.vars.apps = [
+        {
+            id: "start",
+            name: "Start",
+            icon: "/images/appicons/start.png",
+            isSystemPinned: true,
+            opensWindow: false,
+            app: "C:/Programs/TestApp1",
+        },
+        {
+            id: "ta1",
+            name: "Test App 1",
+            icon: "/images/appicons/ta1.png",
+            isUserPinned: true,
+            app: "C:/Programs/TestApp1",
+            style: "width:800px;height:600px;",
+            canHaveMultipleWindows: false,
+        },
+        {
+            id: "ta2",
+            name: "Test App 2",
+            icon: "/images/appicons/ta2.png",
+            isUserPinned: true,
+            app: "C:/Programs/TestApp1",
+            style: "width:800px;height:600px;",
+            canHaveMultipleWindows: false,
+        },
     ];
 </script>
 
 <main>
     <!-- {theme} -->
     <slot />
-    <WindowContainer windows={window.solar.settings.apps} />
-    <Taskbar apps={window.solar.settings.apps} />
+    <WindowContainer windows={window.solar.vars.apps} />
+    <Taskbar apps={window.solar.vars.apps} />
 </main>
 
 <style lang="scss">

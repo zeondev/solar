@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { url } from "@roxi/routify";
+  import { url, goto } from "@roxi/routify";
   import { beforeUrlChange } from "@roxi/routify";
   var d = new Date();
 
@@ -90,6 +90,7 @@
   function playBootSound() {
     var audio = new Audio("/w11startup.mp3");
     audio.play();
+    $goto('./desktop')
   }
 
   onMount(async () => {
@@ -115,13 +116,13 @@
   <div class="overlay" on:mousemove={testfunction}>
     <!-- overlay stuff i guess -->
     <div class="center">
-      <h1 id="lockScreenTime">aa</h1>
-      <h3 id="lockScreenDate">aa</h3>
+      <h1 id="lockScreenTime">0:00</h1>
+      <h3 id="lockScreenDate">Sunday, January 1</h3>
     </div>
     <div class="bottom">
       <icon>&#xE839;</icon>
     </div>
-    <a href={$url("./desktop")}>hi click me please</a>
+    <a href={$url("./desktop")}>click anywhere to visit the desktop</a>
   </div>
   <div class="overlay2">
     <h1>hi</h1>
@@ -129,6 +130,12 @@
 </main>
 
 <style lang="scss">
+  a {
+    position: absolute;
+    bottom:15px;left:50%;transform: translate(-50%,0);
+    font-size: larger;
+    color:white;
+  }
   main {
     filter: contrast(0deg);
     font-family: "Segoe UI Variable";
