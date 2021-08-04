@@ -2,7 +2,7 @@
 
 Welcome to Solar! Solar is a Windows 11 recreation in [Svelte](https://svelte.dev) using [Routify](https://routify.dev).
 
-**Solar is currently not finished, so anything you see here is not the final product.**
+**Note: Solar is currently not finished, so anything you see here is not the final product.**
 
 ## 🛠️ Building
 
@@ -21,3 +21,7 @@ Run the command `npm install`, then `npm run dev` to run a development session. 
 ## 🆕 Create an app
 
 To read more about how to create an app, see the [docs](/docs/WindowOptions.md).
+
+## 📝 Note
+
+We are not affiliated with Microsoft. Windows 11 is a registered trademark of Microsoft. This is a fan project and is meant to replicate the Windows 11 experience as best as possible.
